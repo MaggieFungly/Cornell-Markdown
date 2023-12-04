@@ -256,15 +256,15 @@ class BlockTitleWidget(QWidget):
         self.block_title_lineedit = QLineEdit()
 
         # Create QPushButtons
-        insert_icon = QIcon('icon/add_icon.png')
+        insert_icon = QIcon('icons/add_icon.png')
         self.insert_button = QPushButton(icon=insert_icon)
         self.insert_button.setFixedSize(30, 30)
 
-        remove_icon = QIcon('icon/remove_icon.png')
+        remove_icon = QIcon('icons/remove_icon.png')
         self.remove_button = QPushButton(icon=remove_icon)
         self.remove_button.setFixedSize(30, 30)
 
-        highlight_icon = QIcon('icon/highlight_icon.png')
+        highlight_icon = QIcon('icons/highlight_icon.png')
         self.highlight_button = QPushButton(icon=highlight_icon)
         self.highlight_button.setFixedSize(30, 30)
 
@@ -318,7 +318,7 @@ class MyApp(QWidget):
 
     def init_ui(self):
         self.setWindowTitle('Cornell in Markdown')
-        self.setWindowIcon(QIcon("icon/app_icon.png"))
+        self.setWindowIcon(QIcon("icons/app_icon.png"))
         self.setGeometry(100, 100, 800, 600)
 
         self.layout = QGridLayout()
