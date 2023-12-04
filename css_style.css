@@ -1,0 +1,39 @@
+body {
+    font-family: 'CMU Serif';
+    font-size: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+blockquote {
+    border-left: 3px solid #7D93B0;
+    background-color: #e2e6e961;
+    padding: 10px;
+    color: #344B61;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+code.inline-code {
+    color: rgba(109, 163, 148);
+    background-color: rgba(180, 214, 197, 70);
+    font-family: consolas;
+}
+
+pre > code {
+    background: #e2e6e961;
+    border-left: 3px solid #6DA394;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: consolas;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
