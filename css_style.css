@@ -16,13 +16,7 @@ img {
     height: auto;
 }
 
-code.inline-code {
-    color: rgba(109, 163, 148);
-    background-color: rgba(180, 214, 197, 70);
-    font-family: consolas;
-}
-
-pre > code {
+code.code {
     background: #e2e6e961;
     border-left: 3px solid #6DA394;
     color: #666;
@@ -36,4 +30,10 @@ pre > code {
     padding: 1em 1.5em;
     display: block;
     word-wrap: break-word;
+}
+
+code.inline-code {
+    color: rgba(109, 163, 148);
+    background-color: rgba(180, 214, 197, 70);
+    font-family: consolas;
 }
