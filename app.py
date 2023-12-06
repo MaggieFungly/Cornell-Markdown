@@ -357,7 +357,7 @@ class MyApp(QWidget):
         # Notes and Cues
         self.notes_cues_list_widget = ListWidget()
         self.notes_cues_list_widget.setFlow(QListView.TopToBottom)
-        self.notes_cues_list_widget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self.notes_cues_list_widget.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
 
         # Outlines list widget
         self.outlines_list_widget = ListWidget()
@@ -389,7 +389,7 @@ class MyApp(QWidget):
             self.notes_cues_list_widget, 1, 0)
         self.layout.addWidget(
             self.outlines_list_widget, 1, 1)
-
+        
         # set layout for the whole widget
         self.setLayout(self.layout)
         self.show()
@@ -721,6 +721,8 @@ class MyApp(QWidget):
             self.layout.removeWidget(self.notes_cues_list_widget)
             self.layout.addWidget(self.notes_cues_list_widget, 1, 0, 1, 1)
 
+        self.notes_cues_list_widget.setSizePolicy(
+            QSizePolicy.Preferred, QSizePolicy.Preferred)
 
 if __name__ == '__main__':
 
