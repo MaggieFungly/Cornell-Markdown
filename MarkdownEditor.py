@@ -54,7 +54,7 @@ class MarkdownHighlighter(QSyntaxHighlighter):
             (QRegularExpression(r'\*\*\*(.*?)\*\*\*'),
              boldItalicFormat),  # Bold and italic text
             (QRegularExpression(r'`([^`]+)`'), inlineCodeFormat),  # Code
-            (QRegularExpression(r'\$([^`]+)\$'), inlineMathFormat),  # Inline equations
+            (QRegularExpression(r'\$(.*?)\$'), inlineMathFormat),  # Inline equations
             (QRegularExpression(r'\[([^\]]+)\]\(([^)]+)\)'),
              linkFormat),  # Links
             (QRegularExpression(r'```(.*?)```',

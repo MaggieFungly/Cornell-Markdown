@@ -130,9 +130,10 @@ class BlockNotesCuesWidget(QWidget):
         # set baseurl
         self.baseurl = QUrl.fromLocalFile(
             os.path.dirname(os.path.abspath(__file__)) + '/')
+        print(self.baseurl)
 
     def calculate_html_height(self, view):
-        # JavaScript code to calculate the height of the content
+
         js_code = """
                     function documentHeight() {
                         var body = document.body;
@@ -144,9 +145,10 @@ class BlockNotesCuesWidget(QWidget):
                     }
                     documentHeight();
                 """
+        
         result_list = []
         loop = QEventLoop()
-        # Run the JavaScript code and get the result
+
         view.page().runJavaScript(js_code, lambda result: (
             result_list.append(result), loop.quit()))
         loop.exec_()
@@ -161,12 +163,12 @@ class BlockNotesCuesWidget(QWidget):
             edit_size = fontMetrics.size(
                 0, widget.toPlainText())
             edit_height = edit_size.height()
-            return int(edit_height) + 25
+            return int(edit_height) + 30
 
         elif widget_mode == "browser":
             # Usage:
             result_list = self.calculate_html_height(widget)
-            return int(result_list[0]) + 10
+            return int(result_list[0])
 
     def auto_resize(self):
 
@@ -355,6 +357,7 @@ class MyApp(QWidget):
         # Notes and Cues
         self.notes_cues_list_widget = ListWidget()
         self.notes_cues_list_widget.setFlow(QListView.TopToBottom)
+        self.notes_cues_list_widget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
 
         # Outlines list widget
         self.outlines_list_widget = ListWidget()
