@@ -134,14 +134,25 @@ class BlockNotesCuesWidget(QWidget):
 
     def calculate_html_height(self, view):
 
+        # js_code = """
+                    # function documentHeight() {
+                        # var body = document.body;
+                        # var html = document.documentElement;
+                        # return Math.max(
+                            # body.scrollHeight, 
+                            # body.offsetHeight,
+                            # html.clientHeight, 
+                            # html.scrollHeight, 
+                            # html.offsetHeight
+                        # );
+                    # }
+                    # documentHeight();
+                # """
         js_code = """
                     function documentHeight() {
                         var body = document.body;
                         var html = document.documentElement;
-                        return Math.max(
-                            body.scrollHeight, body.offsetHeight,
-                            html.clientHeight, html.scrollHeight, html.offsetHeight
-                        );
+                        return html.offsetHeight;
                     }
                     documentHeight();
                 """
