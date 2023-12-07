@@ -1,14 +1,14 @@
 [
   {
     "title": "headings",
-    "notes": "# headings\n\n## second headings\n\n### third headings\n\n- This is the third heading\n\n#### fourth headings",
-    "cues": "we use `#` to insert headings\n\n",
+    "notes": "# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n#### Heading 4\n\n##### Heading 5",
+    "cues": "we use `#` to insert headings",
     "hierarchy": 0,
     "highlighted": 1
   },
   {
     "title": "highlights",
-    "notes": "- we can use **bold** and *italics* to highlight texts.\n\t\n\t- we can also use `-` to indicate hierarchy\n\t\t\n\t\t- and the third hierarichy\n",
+    "notes": "- we can use **bold** and *italics* to highlight texts.\n\t\n\t- we can also use `-` to indicate hierarchy\n\t\t\n\t\t- and the third hierarichy\n>- the second list ",
     "cues": "- bold and italics\n\n- items",
     "hierarchy": 0,
     "highlighted": 0
@@ -22,8 +22,8 @@
   },
   {
     "title": "math",
-    "notes": "The sum of $a_i, i = 0, \\dots, 10$ can be denoted as \n$$\n\\sum_{i=0}^{10} a_i\n$$",
-    "cues": "use `$`  and `$$` to start editing math equations.",
+    "notes": "Use $a$ and $b$ to write a function:\n$$\ny = ax + b\n$$",
+    "cues": "use `$$` to start editing math equations.",
     "hierarchy": 0,
     "highlighted": 0
   },
@@ -32,13 +32,13 @@
     "notes": "> this is a block quote\n>> this is a nested block quote\n>>> and another one\n>>> - this is an item of a block quote\n>>> \t- this is another item of the same block quote",
     "cues": "use `>` to start writing block quotes.",
     "hierarchy": 0,
-    "highlighted": 0
+    "highlighted": 1
   },
   {
-    "title": "tables",
-    "notes": "| col 1 | col 2 | \n| ------ | ------ |\n|  a    |   b    |",
-    "cues": "",
+    "title": "horizontal lines",
+    "notes": "section 1\n\n----\n\nsection 2\n\n",
+    "cues": "use `----` to indicate horizontal lines",
     "hierarchy": 0,
-    "highlighted": 1
+    "highlighted": 0
   }
 ]
